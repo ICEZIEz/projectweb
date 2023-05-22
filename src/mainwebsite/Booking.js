@@ -8,13 +8,13 @@ const Booking =()=>{
     const [data, setData] = useState([]);
     const [trigger,setTrigger] = useState(true);
     useEffect(()=>{
-        axios.get('http://localhost:5000/booking').then((res)=>{
+        axios.get('https://impossible-red-oyster.cyclic.app/booking').then((res)=>{
             setData(res.data);
         })
     },[trigger])
 
     const handleDelete = (data) => {
-        axios.delete(`http://localhost:5000/delete/${data.Booking_ID}`).then((res)=>{
+        axios.delete(`https://impossible-red-oyster.cyclic.app/delete/${data.Booking_ID}`).then((res)=>{
             alert('delete success');
             setTrigger(!trigger);
         })

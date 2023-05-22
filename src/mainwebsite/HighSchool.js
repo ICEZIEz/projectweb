@@ -18,7 +18,7 @@ const HighSchool =()=>{
       countcourse,
       Price
     };
-    axios.post('http://localhost:5000/Bookings',newData).then((res)=>{
+    axios.post('https://impossible-red-oyster.cyclic.app/Bookings',newData).then((res)=>{
     console.log("abc",res);
     navigate("/Booking");
     })
